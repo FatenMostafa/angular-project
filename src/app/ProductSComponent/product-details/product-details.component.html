@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <h4 class="text-center"><span class="label label-info">Clothes</span></h4>
+          <img [src]="selectedProduct.Image" class="img-responsive">
+          <div class="caption">
+            <div class="row">
+              <div class="col-md-6 col-xs-6">
+                <h3>{{selectedProduct.Name}}</h3>
+              </div>
+              <div class="col-md-6 col-xs-6 price">
+                <h3>
+                  <label>{{selectedProduct.Price}}</label></h3>
+              </div>
+            </div>
+            <p>{{selectedProduct.Description}}</p>
+            <p><span>Needed Quantity:</span>
+            <input type="number" value="0" #NeededNum min="0" max={{selectedProduct.Quantity}}/>
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <button (click)="goBack()" class="btn btn-primary btn-product"><span
+                    class="glyphicon glyphicon-thumbs-up"></span> Back</button>
+              </div>
+              <div class="col-md-6">
+                <a (click)="addToCart(selectedProduct,NeededNum.value)"  class="btn btn-success btn-product" ><span class="glyphicon glyphicon-shopping-cart"></span>
+                  Add to Cart</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="row">
+ <div id="demo" class="col-12 carousel slide" data-ride="carousel">
+ 
+     <!-- Indicators -->
+     <ul class="carousel-indicators">
+       <li data-target="#demo" data-slide-to="0" class="active"></li>
+       <li data-target="#demo" data-slide-to="1"></li>
+       <li data-target="#demo" data-slide-to="2"></li>
+     </ul>
+     
+     <!-- The slideshow -->
+     <div class="carousel-inner">
+       <div class="carousel-item active">
+         <img src="assets/slide3.jpg" alt="Los Angeles" width="1100" height="500">
+       </div>
+       <div class="carousel-item">
+         <img src="assets/slide4.jpg" alt="Chicago" width="1100" height="500">
+       </div>
+       <div class="carousel-item">
+         <img src="assets/slide5.jpg" alt="New York" width="1100" height="500">
+       </div>
+     </div>
+     
+     <!-- Left and right controls -->
+     <a class="carousel-control-prev" href="#demo" data-slide="prev">
+       <span class="carousel-control-prev-icon"></span>
+     </a>
+     <a class="carousel-control-next" href="#demo" data-slide="next">
+       <span class="carousel-control-next-icon"></span>
+     </a>
+   </div>
+   </div>
+   </div>
+         
+           
+ 
+<div class="container">
+<div class="row" >
+<!-- <div *ngFor="let pro of productList | async|filter:filter| paginate: { itemsPerPage: 6, currentPage: p }" class="col-3" routerLink="/product/{{pro.ID}}"> -->
+  <div *ngFor="let pro of productList" class="col-3" routerLink="/product/{{pro.ID}}" > 
+  <figure class="card card-product">
+          <div class="img-wrap"> <img [src]="pro.Image"> </div>
+          <figcaption class="info-wrap text-center">
+            <h6 class="title text-truncate" ><a>{{pro.Name}}</a></h6>
+          </figcaption> 
+  </figure> 
+</div>  
+</div>
+</div>
+
+<!-- <ul class="pagination">  
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>  
+    </ul>   -->
+<!-- <div class="container">
+<ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" routerLinkActive="active" routerLink="/productsFromApi/{{1}}">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+  </div> -->
+
+<!------ Include the above in your HEAD tag ---------->
+<!-- 
+<h2>User Details</h2>  
+<mat-form-field>  
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">  
+</mat-form-field>  
+  
+<div class="mat-elevation-z8">  
+  <table mat-table [dataSource]="dataSource" matSort>  
+  
+    <ng-container matColumnDef="UserId">  
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> UserId </th>  
+      <td mat-cell *matCellDef="let user"> {{user.UserId}} </td>  
+    </ng-container>  
+  
+    <ng-container matColumnDef="UserName">  
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>  
+      <td mat-cell *matCellDef="let user"> {{user.UserName}} </td>  
+    </ng-container>  
+  
+        <ng-container matColumnDef="EmailId">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> EmailId </th>  
+          <td mat-cell *matCellDef="let user"> {{user.EmailId}} </td>  
+        </ng-container>  
+  
+    <ng-container matColumnDef="Gender">  
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>  
+      <td mat-cell *matCellDef="let user"> {{user.Gender ==0? 'Male' : 'Female'}} </td>  
+    </ng-container>  
+  
+        <ng-container matColumnDef="Address">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>  
+          <td mat-cell *matCellDef="let user"> {{user.Address}} </td>  
+        </ng-container>  
+  
+        <ng-container matColumnDef="MobileNo">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No </th>  
+          <td mat-cell *matCellDef="let user"> {{user.MobileNo}} </td>  
+        </ng-container>  
+  
+        <ng-container matColumnDef="PinCode">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> PinCode </th>  
+          <td mat-cell *matCellDef="let user"> {{user.PinCode}} </td>  
+        </ng-container>  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>  
+  </table>  
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>  
+</div>-->   

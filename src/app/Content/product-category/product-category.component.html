@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div class="row" >
+    <div *ngFor="let pro of productList" class="col-3" routerLink="/product/{{pro.ID}}">
+            <figure class="card card-product">
+              <div class="img-wrap"> <img [src]="pro.Image"> </div>
+              <figcaption class="info-wrap text-center">
+                <h6 class="title text-truncate" ><a href="#">{{pro.Name}}</a></h6>
+              </figcaption> 
+            </figure> <!-- card // -->
+    </div>  
+    </div>
+    </div>
+  

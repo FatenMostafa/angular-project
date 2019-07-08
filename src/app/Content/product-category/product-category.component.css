@@ -1,0 +1,42 @@
+.carousel-inner img {
+    width: 100%;
+    height:350px;
+}
+
+span #buttonDetail
+{
+    display:inline-block;
+    border:1px solid #384aeb;
+    border-radius:30px;
+    color:#222;
+    font-weight: 500;
+    padding:12px 50px;
+    background:#384aeb;
+    color:#fff;
+    transition:all .4s ease;margin-left: 60px; 
+}
+.card-product{
+    margin-top:10px;
+
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.card-product .img-wrap {
+    border-radius: 0.2rem 0.2rem 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+}
+.card-product:hover {
+    -webkit-box-shadow: 0 4px 15px  rgba(78, 68, 68, 0.3);
+    box-shadow: 0 4px 15px rgba(78, 68, 68, 0.3);
+    -webkit-transition: .6s;
+    transition: .6s;
+}

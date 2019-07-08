@@ -1,0 +1,14 @@
+.footer-area {
+  padding-top: 100px;
+  color: #777777;
+  background-color: #222222;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul img{
+  margin:10px
+}
